@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon World - Hoat Hinh Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🎬</span>
+            <span>Cartoon <strong>World</strong></span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Tim kiem phim hoat hinh...">
+            <button id="searchButton">Tim kiem</button>
+        </div>
+    </header>
+
+    <!-- Menu dieu huong -->
+    <nav class="head-link">
+        <a href="#home">Trang chu</a>
+        <a href="#movies">Danh sach phim</a>
+        <a href="#player">Xem phim</a>
+        <a href="#footer">Lien he</a>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <h1>The gioi hoat hinh</h1>
+        <p>Kham pha nhung bo phim hoat hinh thu vi moi ngay!</p>
+    </section>
+
+    <!-- Noi dung chinh -->
+    <div class="content" id="movies">
+
+        <!-- Danh sach phim -->
+        <aside class="left-content">
+            <h2>Danh sach phim</h2>
+
+            <label for="sortSelect">Sap xep:</label>
+            <select id="sortSelect">
+                <option value="newest">Moi cap nhat</option>
+                <option value="views">Nhieu luot xem</option>
+            </select>
+
+            <div id="movieList" class="movie-list">
+
+                <div class="movie-item active"
+                     data-title="Big Buck Bunny"
+                     data-date="20261020"
+                     data-views="95000"
+                     data-video="aqz-KE-bpKQ">
+                    <img src="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg"
+                         alt="Big Buck Bunny">
+                    <div>
+                        <h3>Big Buck Bunny</h3>
+                        <p>Hoat hinh vui nhon</p>
+                        <small>95.000 luot xem</small>
+                    </div>
+                </div>
+
+                <div class="movie-item"
+                     data-title="Sintel"
+                     data-date="20261015"
+                     data-views="78000"
+                     data-video="eRsGyueVLvQ">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sintel_poster.jpg/320px-Sintel_poster.jpg"
+                         alt="Sintel">
+                    <div>
+                        <h3>Sintel</h3>
+                        <p>Phieu luu ky ao</p>
+                        <small>78.000 luot xem</small>
+                    </div>
+                </div>
+
+                <div class="movie-item"
+                     data-title="Tears of Steel"
+                     data-date="20261010"
+                     data-views="52000"
+                     data-video="R6MlUcmOul8">
+                    <img src="https://mango.blender.org/wp-content/uploads/2013/05/01_thom_celia_bridge.jpg"
+                         alt="Tears of Steel">
+                    <div>
+                        <h3>Tears of Steel</h3>
+                        <p>Hoat hinh khoa hoc vien tuong</p>
+                        <small>52.000 luot xem</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                Khong tim thay phim phu hop.
+            </p>
+        </aside>
+
+        <!-- Khu vuc xem phim -->
+        <main class="right-content" id="player">
+            <h2 id="videoTitle">Big Buck Bunny</h2>
+
+            <div class="video-container">
+                <iframe
+                    id="videoPlayer"
+                    src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ"
+                    title="Trinh phat phim hoat hinh"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="movie-info">
+                <h3>Thong tin phim</h3>
+                <p id="videoDescription">
+                    Big Buck Bunny la bo phim hoat hinh 3D vui nhon.
+                </p>
+                <p>Chat luong: tuy thuoc vao video va nguon phat.</p>
+            </div>
+
+            <div class="notice">
+                <strong>Luu y:</strong> Chi lua chon va bo sung video co
+                noi dung phu hop voi tre em. Hay kiem tra ngon ngu,
+                thuyet minh va chat luong truoc khi dang phim.
+            </div>
+
+            <!-- Vi du su dung the video HTML5 -->
+            <details class="html5-demo">
+                <summary>Xem vi du phat video HTML5</summary>
+                <video controls preload="metadata">
+                    <source
+                        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                        type="video/mp4">
+                    Trinh duyet khong ho tro video HTML5.
+                </video>
+                <p>Video mau HTML5, khong phai phim hoat hinh.</p>
+            </details>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2026 Cartoon World. All rights reserved.</p>
+        <p>Website hoc tap HTML, CSS va JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

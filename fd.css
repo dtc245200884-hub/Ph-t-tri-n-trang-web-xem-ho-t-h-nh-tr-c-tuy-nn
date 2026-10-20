@@ -1,0 +1,360 @@
+
+/* Cai dat chung */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #222;
+}
+
+/* Header co dinh */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 5%;
+    background-color: #172554;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo strong {
+    color: #facc15;
+}
+
+.logo-icon {
+    font-size: 32px;
+}
+
+/* Tim kiem */
+.search-box {
+    display: flex;
+    gap: 8px;
+    max-width: 480px;
+    width: 100%;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #facc15;
+    color: #172554;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #fde68a;
+}
+
+/* Menu dieu huong */
+.head-link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 14px;
+    background-color: #1e3a8a;
+}
+
+.head-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.head-link a:hover {
+    color: #facc15;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    padding: 35px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #2563eb, #7c3aed);
+}
+
+.banner h1 {
+    margin: 0 0 12px;
+    font-size: 34px;
+}
+
+.banner p {
+    margin: 0;
+    font-size: 17px;
+}
+
+/* Layout chinh */
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    max-width: 1400px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+/* Cot trai */
+.left-content {
+    flex: 0 0 340px;
+    min-width: 0;
+    padding: 18px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.left-content h2,
+.right-content h2 {
+    margin-top: 0;
+}
+
+.left-content label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+.left-content select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+}
+
+/* Danh sach phim */
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.movie-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.movie-item:hover,
+.movie-item.active {
+    background-color: #eff6ff;
+    border-color: #2563eb;
+}
+
+.movie-item img {
+    width: 105px;
+    height: 78px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movie-item h3 {
+    margin: 2px 0 7px;
+    font-size: 16px;
+}
+
+.movie-item p {
+    margin: 0 0 7px;
+    color: #555;
+    font-size: 13px;
+}
+
+.movie-item small {
+    color: #2563eb;
+}
+
+.empty-message {
+    color: #b91c1c;
+}
+
+/* Cot phat video */
+.right-content {
+    flex: 1;
+    min-width: 0;
+    padding: 22px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000012;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.movie-info {
+    margin-top: 20px;
+    line-height: 1.7;
+}
+
+.notice {
+    margin-top: 18px;
+    padding: 15px;
+    border-left: 4px solid #2563eb;
+    border-radius: 4px;
+    background-color: #eff6ff;
+    line-height: 1.6;
+}
+
+.html5-demo {
+    margin-top: 20px;
+}
+
+.html5-demo summary {
+    padding: 12px;
+    background-color: #f3f4f6;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.html5-demo video {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    padding: 25px 15px;
+    text-align: center;
+    color: white;
+    background-color: #172554;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .content {
+        gap: 15px;
+    }
+
+    .left-content {
+        flex-basis: 280px;
+    }
+
+    .movie-item {
+        flex-direction: column;
+    }
+
+    .movie-item img {
+        width: 100%;
+        height: 130px;
+    }
+
+    .header {
+        padding: 12px 20px;
+    }
+}
+
+/* Dien thoai */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .logo {
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    .search-box {
+        max-width: none;
+    }
+
+    .head-link {
+        gap: 12px 20px;
+    }
+
+    .head-link a {
+        font-size: 14px;
+    }
+
+    .banner {
+        padding: 28px 15px;
+    }
+
+    .banner h1 {
+        font-size: 27px;
+    }
+
+    .content {
+        flex-direction: column;
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+        flex: auto;
+        padding: 15px;
+    }
+
+    .movie-item {
+        flex-direction: row;
+    }
+
+    .movie-item img {
+        width: 105px;
+        height: 78px;
+    }
+}
